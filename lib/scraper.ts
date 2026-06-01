@@ -46,7 +46,7 @@ function extractPrices(html: string): TicketListing[] {
 
   while ((match = priceRegex.exec(html)) !== null) {
     const val = parseInt(match[1].replace(',', ''))
-    if (val >= 50 && val <= 50000 && !seen.has(val)) {
+    if (val >= 350 && val <= 50000 && !seen.has(val)) {
       seen.add(val)
       listings.push({ price: val })
     }
